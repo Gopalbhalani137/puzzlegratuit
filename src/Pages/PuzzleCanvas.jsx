@@ -25,14 +25,14 @@ const PuzzleCanvas = () => {
         };
     }, [timerActive]);
     useEffect(() => {
-  if (image?.largeImageURL) {
-    const img = new Image();
-    img.onload = () => {
-      setImageDimensions({ width: img.width, height: img.height });
-    };
-    img.src = image.largeImageURL;
-  }
-}, [image]);
+        if (image?.largeImageURL) {
+            const img = new Image();
+            img.onload = () => {
+                setImageDimensions({ width: img.width, height: img.height });
+            };
+            img.src = image.largeImageURL;
+        }
+    }, [image]);
     const formatTime = (seconds) => {
         const mins = Math.floor(seconds / 60);
         const secs = seconds % 60;
@@ -57,10 +57,7 @@ const PuzzleCanvas = () => {
     };
 
     const handlePlayAgain = () => {
-        setElapsedTime(0);
-        setTimerActive(true);
-        setShowCongrats(false);
-        window.location.reload();
+        navigate('/jigsaw');
     };
 
     const customStyles = {
@@ -78,8 +75,8 @@ const PuzzleCanvas = () => {
     return (
         <>
             <Helmet>
-                <title>{puzzleTitle} | 
-Jeu de puzzle interactif en ligne</title>
+                <title>{puzzleTitle} |
+                    Jeu de puzzle interactif en ligne</title>
                 <meta
                     name="description"
                     content={`Play this ${rows}×${cols} piece jigsaw puzzle online. Challenge yourself with our interactive puzzle game featuring beautiful imagery from ${image?.user}.`}
@@ -145,9 +142,9 @@ Jeu de puzzle interactif en ligne`,
                             }}
                         ></i>
                         <h2 className="fs-3 fw-bold my-3 text-danger">
-                        Données de puzzle manquantes</h2>
+                            Données de puzzle manquantes</h2>
                         <p className="mb-4 text-muted">
-                        Veuillez sélectionner une image et un niveau de difficulté dans la galerie.
+                            Veuillez sélectionner une image et un niveau de difficulté dans la galerie.
                         </p>
                         <button
                             onClick={() => navigate('/jigsaw')}
@@ -211,16 +208,16 @@ Jeu de puzzle interactif en ligne`,
                                             onClick={handleGoBackToGallery}
                                             className="btn btn-light d-flex align-items-center gap-1 border-light"
                                         >
-                                            <ArrowBigLeft/>
+                                            <ArrowBigLeft />
                                             Galerie
                                         </button>
                                         <button
                                             onClick={handleGoHome}
                                             className="btn btn-light d-flex align-items-center gap-1 border-light"
                                         >
-                                            <ArrowBigLeft/>
-                                            
-Maison
+                                            <ArrowBigLeft />
+
+                                            Maison
                                         </button>
                                     </div>
 
@@ -231,7 +228,7 @@ Maison
                                             <i className="bi bi-clock me-1 text-primary"></i>
                                             <span className="text-dark">{formatTime(elapsedTime)}</span>
                                         </div>
-                                       
+
                                     </div>
                                     <div className="d-flex align-items-center">
                                         <span className="badge bg-white shadow-sm px-2 py-1 text-muted rounded-pill border">
@@ -242,13 +239,12 @@ Maison
                                 </div>
                             </div>
                             <div
-  className="position-relative w-100 bg-light rounded-4 border border-light-subtle overflow-hidden shadow-sm"
-  style={{ 
-    maxWidth: '1000px',
-    height: imageDimensions.width ? `${Math.min(600, (imageDimensions.height / imageDimensions.width) * 1000)}px` : 'auto',
-    ...customStyles 
-  }}
->
+                                className="position-relative w-100 bg-light rounded-4 border border-light-subtle overflow-hidden shadow-sm"
+                                style={{
+                                    maxWidth: '1000px',
+                                    height: image.height
+                                }}
+                            >
                                 <JigsawPuzzle
                                     imageSrc={image.largeImageURL}
                                     rows={rows}
@@ -280,8 +276,8 @@ Maison
                                         <div className="modal-header border-bottom-0 bg-primary bg-gradient text-white">
                                             <h5 className="modal-title">
                                                 <i className="bi bi-trophy-fill me-2"></i>
-                                                
-Félicitations!
+
+                                                Félicitations!
                                             </h5>
                                             <button type="button" className="btn-close btn-close-white" aria-label="Close" onClick={handleCloseModal}></button>
                                         </div>
@@ -312,7 +308,7 @@ Félicitations!
                                         <div className="modal-footer border-top-0 bg-light justify-content-center gap-2 p-3">
                                             <button
                                                 type="button"
-                                                className="btn btn-outline-secondary px-4 rounded-pill"
+                                                className="btn btn-primary px-4 rounded-pill"
                                                 onClick={handleGoBackToGallery}
                                             >
                                                 <i className="bi bi-grid-3x3-gap-fill me-2"></i>
