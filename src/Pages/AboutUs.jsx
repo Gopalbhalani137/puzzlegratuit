@@ -29,7 +29,7 @@ function AboutUs() {
             <div className="about-us__image">
               <img
                 src={img1}
-                alt="image représentant un travail d'équipe"
+                alt="représentant un travail d'équipe"
               />
             </div>
             <div className="about-us__text">

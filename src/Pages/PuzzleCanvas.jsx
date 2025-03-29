@@ -78,7 +78,8 @@ const PuzzleCanvas = () => {
     return (
         <>
             <Helmet>
-                <title>{puzzleTitle} | Interactive Online Jigsaw Puzzle Game</title>
+                <title>{puzzleTitle} | 
+Jeu de puzzle interactif en ligne</title>
                 <meta
                     name="description"
                     content={`Play this ${rows}×${cols} piece jigsaw puzzle online. Challenge yourself with our interactive puzzle game featuring beautiful imagery from ${image?.user}.`}
@@ -87,7 +88,8 @@ const PuzzleCanvas = () => {
                     name="keywords"
                     content={`jigsaw puzzle, online puzzle, interactive game, ${rows}×${cols} puzzle, ${image?.user}, puzzle game`}
                 />
-                <meta property="og:title" content={`${puzzleTitle} | Interactive Online Jigsaw Puzzle Game`} />
+                <meta property="og:title" content={`${puzzleTitle} | 
+Jeu de puzzle interactif en ligne`} />
                 <meta
                     property="og:description"
                     content={`Play this ${rows}×${cols} piece jigsaw puzzle online. Challenge yourself with our interactive puzzle game featuring beautiful imagery from ${image?.user}.`}
@@ -95,7 +97,8 @@ const PuzzleCanvas = () => {
                 <meta property="og:image" content={image?.largeImageURL} />
                 <meta property="og:type" content="game" />
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content={`${puzzleTitle} | Interactive Online Jigsaw Puzzle Game`} />
+                <meta name="twitter:title" content={`${puzzleTitle} | 
+Jeu de puzzle interactif en ligne`} />
                 <meta
                     name="twitter:description"
                     content={`Play this ${rows}×${cols} piece jigsaw puzzle online. Challenge yourself with our interactive puzzle game.`}
@@ -107,7 +110,8 @@ const PuzzleCanvas = () => {
                     {JSON.stringify({
                         '@context': 'https://schema.org',
                         '@type': 'Game',
-                        name: `${puzzleTitle} | Interactive Online Jigsaw Puzzle Game`,
+                        name: `${puzzleTitle} | 
+Jeu de puzzle interactif en ligne`,
                         description: `Play this ${rows}×${cols} piece jigsaw puzzle online. Challenge yourself with our interactive puzzle game.`,
                         image: image?.largeImageURL,
                         author: {
@@ -140,9 +144,10 @@ const PuzzleCanvas = () => {
                                 WebkitTextFillColor: 'transparent',
                             }}
                         ></i>
-                        <h2 className="fs-3 fw-bold my-3 text-danger">Missing puzzle data</h2>
+                        <h2 className="fs-3 fw-bold my-3 text-danger">
+                        Données de puzzle manquantes</h2>
                         <p className="mb-4 text-muted">
-                            Please select an image and difficulty level from the gallery.
+                        Veuillez sélectionner une image et un niveau de difficulté dans la galerie.
                         </p>
                         <button
                             onClick={() => navigate('/jigsaw')}
@@ -153,7 +158,7 @@ const PuzzleCanvas = () => {
                             }}
                         >
                             <i className="bi bi-grid-3x3-gap-fill me-2"></i>
-                            Back to Gallery
+                            Retour à la galerie
                         </button>
                     </div>
                 </div>
@@ -186,12 +191,12 @@ const PuzzleCanvas = () => {
                                 }}
                             >
                                 <i className="bi bi-puzzle-fill me-2"></i>
-                                Puzzle Canvas
+                                Toile de puzzle
                             </h1>
                             <p className="text-muted d-flex align-items-center justify-content-center gap-2">
                                 <span className="badge bg-white border text-dark shadow-sm px-3 py-2 rounded-pill">
                                     <i className="bi bi-grid-3x3 me-1 text-primary"></i>
-                                    Difficulty: {rows}×{cols} = {rows * cols} pieces
+                                    Difficulté: {rows}×{cols} = {rows * cols} pièces
                                 </span>
                             </p>
                         </header>
@@ -207,14 +212,15 @@ const PuzzleCanvas = () => {
                                             className="btn btn-light d-flex align-items-center gap-1 border-light"
                                         >
                                             <ArrowBigLeft/>
-                                            Gallery
+                                            Galerie
                                         </button>
                                         <button
                                             onClick={handleGoHome}
                                             className="btn btn-light d-flex align-items-center gap-1 border-light"
                                         >
                                             <ArrowBigLeft/>
-                                            Home
+                                            
+Maison
                                         </button>
                                     </div>
 
@@ -274,7 +280,8 @@ const PuzzleCanvas = () => {
                                         <div className="modal-header border-bottom-0 bg-primary bg-gradient text-white">
                                             <h5 className="modal-title">
                                                 <i className="bi bi-trophy-fill me-2"></i>
-                                                Congratulations!
+                                                
+Félicitations!
                                             </h5>
                                             <button type="button" className="btn-close btn-close-white" aria-label="Close" onClick={handleCloseModal}></button>
                                         </div>
@@ -282,15 +289,15 @@ const PuzzleCanvas = () => {
                                             <div className="display-1 mb-3" style={{ color: '#FFD700' }}>
                                                 <i className="bi bi-stars"></i>
                                             </div>
-                                            <h2 className="fs-3 fw-bold mb-3">Puzzle Completed!</h2>
-                                            <p className="text-muted mb-4">You've successfully completed the puzzle.</p>
+                                            <h2 className="fs-3 fw-bold mb-3">Puzzle terminé !</h2>
+                                            <p className="text-muted mb-4">Vous avez terminé le puzzle avec succès.</p>
                                             <div className="d-flex justify-content-center flex-wrap gap-3 mb-3">
                                                 <div className="bg-light rounded-4 px-4 py-3 text-center">
                                                     <div className="fs-4 text-primary">
                                                         <i className="bi bi-clock"></i>
                                                     </div>
                                                     <div className="fw-bold">{formatTime(elapsedTime)}</div>
-                                                    <div className="small text-muted">Time</div>
+                                                    <div className="small text-muted">Temps</div>
                                                 </div>
 
                                                 <div className="bg-light rounded-4 px-4 py-3 text-center">
@@ -298,7 +305,7 @@ const PuzzleCanvas = () => {
                                                         <i className="bi bi-grid-3x3"></i>
                                                     </div>
                                                     <div className="fw-bold">{rows * cols}</div>
-                                                    <div className="small text-muted">Pieces</div>
+                                                    <div className="small text-muted">Pièces</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -309,7 +316,7 @@ const PuzzleCanvas = () => {
                                                 onClick={handleGoBackToGallery}
                                             >
                                                 <i className="bi bi-grid-3x3-gap-fill me-2"></i>
-                                                Gallery
+                                                Galerie
                                             </button>
                                             <button
                                                 type="button"
@@ -321,7 +328,7 @@ const PuzzleCanvas = () => {
                                                 onClick={handlePlayAgain}
                                             >
                                                 <i className="bi bi-arrow-repeat me-2"></i>
-                                                Play Again
+                                                Rejouer
                                             </button>
                                         </div>
                                     </div>

@@ -132,7 +132,7 @@ function Blog4() {
                       <br />
                       <img
                         className="mb-30 img-fluid w-full img_article"
-                        alt="Towel babel image"
+                        alt="Towel babel"
                         src={img2}
                       />
                       <p>

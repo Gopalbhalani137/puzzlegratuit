@@ -11,9 +11,9 @@ const categories = ['Nature', 'Technology', 'Animals', 'People', 'Travel', 'Anim
 
 // Define some difficulty levels that ensure a clean grid
 const difficulties = [
-  { name: 'Easy', rows: 2, cols: 2 },
-  { name: 'Medium', rows: 4, cols: 4 },
-  { name: 'Hard', rows: 6, cols: 6 },
+  { name: 'Facile', rows: 2, cols: 2 },
+  { name: 'Moyen', rows: 4, cols: 4 },
+  { name: 'Dur', rows: 6, cols: 6 },
   { name: 'Expert', rows: 8, cols: 8 },
 ];
 
@@ -142,7 +142,7 @@ function Jigsaw() {
               onMouseOut={(e) => (e.currentTarget.style.transform = 'translateY(0)')}
             >
               <ArrowBigLeft />
-              <span>Back Home</span>
+              <span>Retour à la maison</span>
             </button>
           </div>
 
@@ -169,12 +169,12 @@ function Jigsaw() {
                 WebkitTextFillColor: 'transparent',
               }}
             >
-              Jigsaw Puzzle
+              Puzzle
             </h1>
-            <p className="lead text-muted">Select an image and challenge yourself with our interactive puzzles</p>
+            <p className="lead text-muted">Sélectionnez une image et défiez-vous avec nos puzzles interactifs</p>
             <div className="mx-auto mt-3 bg-white rounded-pill shadow-sm py-1 px-4 d-inline-flex align-items-center gap-2">
               <i className="bi bi-info-circle text-primary"></i>
-              <span className="text-muted small">Choose your difficulty level after selecting an image</span>
+              <span className="text-muted small">Choisissez votre niveau de difficulté après avoir sélectionné une image</span>
             </div>
           </header>
 
@@ -206,7 +206,8 @@ function Jigsaw() {
                   }}
                 ></div>
               </div>
-              <p className="mt-4 text-muted fs-5 fw-light">Loading your puzzles...</p>
+              <p className="mt-4 text-muted fs-5 fw-light">
+                Chargement de vos puzzles...</p>
             </div>
           )}
 
@@ -221,7 +222,7 @@ function Jigsaw() {
               <p className="text-danger fs-5 mt-3">Error: {error}</p>
               <button className="btn btn-outline-primary mt-3" onClick={() => window.location.reload()}>
                 <i className="bi bi-arrow-clockwise me-2"></i>
-                Retry
+                Réessayer
               </button>
             </div>
           )}
@@ -232,7 +233,7 @@ function Jigsaw() {
                 <div className="bg-white rounded-pill px-4 py-2 shadow-sm d-flex align-items-center gap-3 border border-light">
                   <span className="fs-6 mb-0 text-dark fw-medium">
                     <i className="bi bi-filter me-2 text-primary"></i>
-                    Filter:
+                    Filtre:
                   </span>
                   <select
                     id="categoryFilter"
@@ -241,7 +242,7 @@ function Jigsaw() {
                     className="form-select border-0 shadow-none pe-5"
                     style={{ width: 'auto', backgroundColor: 'transparent' }}
                   >
-                    <option value="All">All Categories</option>
+                    <option value="All">Toutes les catégories</option>
                     {categories.map((category) => (
                       <option key={category} value={category}>
                         {category}
@@ -359,7 +360,7 @@ function Jigsaw() {
                         WebkitTextFillColor: 'transparent',
                       }}
                     >
-                      Select Difficulty
+                      Sélectionnez la difficulté
                     </h5>
                     <button type="button" className="btn-close" onClick={() => setShowDialog(false)}></button>
                   </div>
@@ -439,7 +440,7 @@ function Jigsaw() {
                           <div className="d-flex align-items-center justify-content-between px-3 h-100">
                             <span className="fs-5 text-white fw-medium">{diff.name}</span>
                             <span className="badge bg-white text-dark rounded-pill px-3 py-2 shadow-sm">
-                              {diff.rows}×{diff.cols} = {diff.rows * diff.cols} pieces
+                              {diff.rows}×{diff.cols} = {diff.rows * diff.cols} pièces
                             </span>
                           </div>
                         </button>
@@ -451,7 +452,7 @@ function Jigsaw() {
                       className="btn btn-outline-secondary w-100 rounded-3"
                       onClick={() => setShowDialog(false)}
                     >
-                      Cancel
+                      Annuler
                     </button>
                   </div>
                 </div>

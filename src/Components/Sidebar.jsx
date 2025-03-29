@@ -20,27 +20,27 @@ function Sidebar() {
             </Helmet>
 
             <div>
-                <aside className="blog_sidebar" role="complementary">
+                <aside className="blog_sidebar">
                     <div className="widget">
                         <h3 className="widget-title text-dark">Connectons-nous</h3>
                         <div className="widget-wrap">
                             <div className="social-widget">
-                                <a href="">
+                                <a>
                                     <div className="social_link facebook">
                                         <i className="ri-facebook-box-line"></i>
                                     </div>
                                 </a>
-                                <a href="">
+                                <a>
                                     <div className="social_link dribbble">
                                         <i className="ri-dribbble-line"></i>
                                     </div>
                                 </a>
-                                <a href="">
+                                <a>
                                     <div className="social_link youtube">
                                         <i className="ri-youtube-line"></i>
                                     </div>
                                 </a>
-                                <a href="">
+                                <a>
                                     <div className="social_link twitter">
                                         <i className="ri-twitter-line"></i>
                                     </div>
@@ -61,7 +61,7 @@ function Sidebar() {
                                 id="exampleFormControlInput1"
                                 placeholder="name@example.com"
                             />
-                            <a href="#" className="btn w-100 btn-secondary sweep_letter sweep_top">
+                            <a className="btn w-100 btn-secondary sweep_letter sweep_top">
                                 <div className="inside_item">
                                     <span data-hover="Join with us!">Rejoignez-nous !</span>
                                 </div>
