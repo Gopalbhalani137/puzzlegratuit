@@ -24,7 +24,7 @@ const BlogPage = () => {
   return (
     <>
       <Helmet>
-        <title>Blog {slug} | Puzzles en ligne</title>
+        {/* <title>Blog {slug} | Puzzles en ligne</title> */}
         <meta
           name="description"
           content={`Découvrez notre blog ${slug} sur les puzzles en ligne.`}

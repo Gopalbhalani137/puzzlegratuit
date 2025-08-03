@@ -4,21 +4,6 @@ import { Helmet } from 'react-helmet';
 function Sidebar() {
     return (
         <>
-            <Helmet>
-                <title>Sidebar | Connectons-nous et Restez à Jour</title>
-                <meta
-                    name="description"
-                    content="Restez connecté avec nous via nos réseaux sociaux et abonnez-vous à notre newsletter pour ne manquer aucune mise à jour."
-                />
-                <meta name="robots" content="index, follow" />
-                <meta property="og:title" content="Sidebar | Connectons-nous et Restez à Jour" />
-                <meta
-                    property="og:description"
-                    content="Restez connecté avec nous via nos réseaux sociaux et abonnez-vous à notre newsletter pour ne manquer aucune mise à jour."
-                />
-                <link rel="canonical" href={window.location.href} />
-            </Helmet>
-
             <div>
                 <aside className="blog_sidebar">
                     <div className="widget">

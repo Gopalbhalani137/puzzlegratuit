@@ -8,24 +8,6 @@ function NavBar() {
 
     return (
         <>
-            <Helmet>
-                <title>Site Navigation | Puzzle &amp; Blog</title>
-                <meta
-                    name="description"
-                    content="Naviguez parmi nos puzzles, notre blog, et découvrez à propos de nous, contactez-nous ou explorez nos termes et conditions."
-                />
-                <meta name="robots" content="index, follow" />
-                <meta
-                    property="og:title"
-                    content="Site Navigation | Puzzle &amp; Blog"
-                />
-                <meta
-                    property="og:description"
-                    content="Trouvez facilement puzzles, blog, et plus encore via notre barre de navigation."
-                />
-                <link rel="canonical" href={window.location.href} />
-            </Helmet>
-
             <Navbar
                 bg="light"
                 expand="lg"

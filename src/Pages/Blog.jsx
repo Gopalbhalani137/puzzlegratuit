@@ -26,7 +26,7 @@ function Blog() {
       image: img1,
       alt: "différentes façons de jouer aux puzzles",
       title: "différentes façons de jouer aux puzzles",
-      link: "jeux-de-reflexion.php",
+      link: "/blog/1",
       excerpt:
         "Bonjour! Aujourd'hui, nous allons parler des différentes façons de jouer aux puzzles..."
     },
@@ -35,7 +35,7 @@ function Blog() {
       image: img2,
       alt: "",
       title: "Le plus grand joueur de jeu de puzzle physique du monde",
-      link: "Joueur.php",
+      link: "/blog/2",
       excerpt:
         "je peux vous donner des informations générales sur les joueurs de puzzle..."
     },
@@ -44,7 +44,7 @@ function Blog() {
       image: img3,
       alt: "",
       title: "Bref historique sur le jeu de puzzle..!!!",
-      link: "Bref-historique.php",
+      link: "/blog/3",
       excerpt:
         "Les puzzles sont un passe-temps populaire depuis des siècles, remontant à l'époque..."
     },
@@ -53,7 +53,7 @@ function Blog() {
       image: img4,
       alt: "",
       title: "Top 10 des jeux de puzzle les plus difficiles",
-      link: "jeux-de-puzzle-difficiles.php",
+      link: "/blog/4",
       excerpt:
         "Il y a les détails du top 10 des puzzles les plus difficiles jamais créés..."
     },
@@ -62,7 +62,7 @@ function Blog() {
       image: img5,
       alt: "",
       title: "Top 10 des communautés de puzzles sur Reddit",
-      link: "communautes-de-casse-tete.php",
+      link: "/blog/5",
       excerpt: "voici une liste de 10 des meilleures communautés de puzzles sur Reddit."
     },
     {
@@ -70,7 +70,7 @@ function Blog() {
       image: img6,
       alt: "",
       title: "10 façons différentes de résoudre un puzzle efficacement",
-      link: "resoudre-une-enigme.php",
+      link: "/blog/6",
       excerpt:
         "Voici les détails de 10 façons différentes de résoudre efficacement un casse-tête :"
     },
@@ -79,7 +79,7 @@ function Blog() {
       image: img7,
       alt: "",
       title: "Top 10 des chaînes YouTube de puzzle",
-      link: "amateurs-de-casse-tete.php",
+      link: "/blog/7",
       excerpt:
         "Voici des détails supplémentaires sur chaque chaîne YouTube..."
     },
@@ -88,7 +88,7 @@ function Blog() {
       image: img8,
       alt: "",
       title: "Top 10 des meilleures entreprises pour acheter des puzzles à bas prix",
-      link: "acheter-des-puzzles.php",
+      link: "/blog/8",
       excerpt:
         "Voici les détails des 10 meilleures entreprises pour acheter des puzzles..."
     },
@@ -98,7 +98,7 @@ function Blog() {
       alt: "",
       title:
         "Quel puzzle est bon pour vous, comparaison entre les puzzles en bois et en carton",
-      link: "puzzles-bois-vs-carton.php",
+      link: "/blog/10",
       excerpt:
         "Voici une comparaison détaillée des puzzles en bois et des puzzles en carton."
     },
@@ -107,7 +107,7 @@ function Blog() {
       image: img11,
       alt: "",
       title: "avantage de jouer à un jeu de puzzle en ligne",
-      link: "avantage-puzzle-en-ligne.php",
+      link: "/blog/11",
       excerpt:
         "Voici quelques avantages de jouer à des puzzles en ligne..."
     },
@@ -116,7 +116,7 @@ function Blog() {
       image: img12,
       alt: "",
       title: "Des puzzles respectueux de l'ego",
-      link: "des-puzzles-respectueux.php",
+      link: "/blog/12",
       excerpt:
         "voici des informations sur les puzzles écologiques..."
     },
@@ -125,7 +125,7 @@ function Blog() {
       image: img13,
       alt: "",
       title: "jeux de réflexion en ligne et puzzles physiques",
-      link: "jeux-de-reflexion-en-ligne.php",
+      link: "/blog/13",
       excerpt:
         "voici une comparaison entre les jeux de puzzle en ligne et les puzzles physiques..."
     },
@@ -135,7 +135,7 @@ function Blog() {
       alt: "",
       title:
         "Comment le jeu de puzzle aide à la santé mentale et la concentration",
-      link: "méditation-de-puzzle.php",
+      link: "/blog/14",
       excerpt:
         "Enfin, les puzzles peuvent être une activité éducative pour les enfants..."
     },
@@ -144,7 +144,7 @@ function Blog() {
       image: puzzleOutil,
       alt: "",
       title: "10 outils de jeu de puzzle que tous les casse-tête devraient posséder",
-      link: "outil-de-puzzle.php",
+      link: "/blog/15",
       excerpt:
         "Comment le jeu de puzzle aide comme dose de méditation pour la santé mentale..."
     },
@@ -153,7 +153,7 @@ function Blog() {
       image: puzzleNoel,
       alt: "",
       title: "jeu de puzzle à jouer pendant les vacances de Noël",
-      link: "puzzle-de-Noël.php",
+      link: "/blog/16",
       excerpt:
         "jeu de puzzle à jouer pendant les vacances de Noël."
     },
@@ -214,8 +214,9 @@ function Blog() {
                                 <div className="col-row col-12">
                                   <div className="blog-wrap">
                                     <h3 className="blog-title">
-                                      <a href={post.link}>{post.title}</a>
+                                      <Link to={`/blog/${post.id}`}>{post.title}</Link>
                                     </h3>
+
                                     <p className="blog-excerpt">
                                       {post.excerpt}
                                     </p>

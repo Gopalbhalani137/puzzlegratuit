@@ -6,21 +6,6 @@ import 'remixicon/fonts/remixicon.css';
 function Footer() {
   return (
     <>
-      <Helmet>
-        <title>Footer | Puzzle Gratuit</title>
-        <meta
-          name="description"
-          content="Le meilleur endroit pour jouer gratuitement aux puzzles en ligne! Rejoignez-nous pour plus de contenu et de divertissement."
-        />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Footer | Puzzle Gratuit" />
-        <meta
-          property="og:description"
-          content="Le meilleur endroit pour jouer gratuitement aux puzzles en ligne! Rejoignez-nous pour plus de contenu et de divertissement."
-        />
-        <link rel="canonical" href={window.location.href} />
-      </Helmet>
-
       <div>
         <footer className="footer__1">
           <div className="container">

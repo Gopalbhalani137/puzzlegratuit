@@ -24,10 +24,8 @@ function Blog1() {
         />
         <link rel="canonical" href={window.location.href} />
       </Helmet>
-
       <div className="container article_page pt-100">
         <div className="main row" id="main-content">
-          {/* ================================= Article */}
           <div className="col-lg-8">
             <div id="content">
               <div className="article_wrap mt-0">
